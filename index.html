@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        const jsonUrl = 'https://prof-jwchi.github.io/kopo-front2026/Json/baseball.json';
+        let jsonData = [];
+        let team = "";
+
+        fetch(jsonUrl)
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            jsonData = data.list;
+            console.log(jsonData);
+
+            for(let i=0; i<jsonData.length; i++)
+            {
+                console.log(jsonData[i].rank.rank);
+                let tr = document.createElement('tr');
+                let td = document.createElement('td');
+                let td1 = document.createElement('td');
+                
+                td.innerHTML = jsonData[i].rank.rank;
+                td1.innerHTML = jsonData[i].shortName;
+                tr.appendChild(td);
+                tr.appendChild(td1);
+                document.getElementById("tbody").appendChild(tr);
+            }
+        })
+        .catch(error => {
+            console.error('json 파일 가져오기 실패', error)
+        })
+    </script>
+
+</head>
+<body>
+    종합 순위
+    <table>
+        <thead>
+            <tr>
+                <th>순위</th> <th>팀</th>
+                <th>경기</th> <th>승</th> <th>무</th> <th>패</th>
+                <th>승률</th> <th>게임차</th> <th>연속</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+</body>
+</html>
