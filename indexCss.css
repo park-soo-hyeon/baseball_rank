@@ -1,0 +1,156 @@
+/* 전체 css */
+.rank {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+    letter-spacing: 0;
+    color: #000;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* 제목 css */
+h4 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 14px;
+    font-size: 18px;
+    letter-spacing: -.04em;
+}
+
+/* 전체 table css */
+.rank_box {
+    position: relative;
+    border-top: 1px solid #494949;
+    padding-top: 43px;
+    background-color: #f7f7f7;
+    margin: 0;
+}
+.rank_table {
+    overflow-y: auto;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* table css */
+.table_list {
+    overflow: hidden;
+    width: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+.table_list th {
+    font-weight: 400;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+.table_list td {
+    height: 44px;
+    border-bottom: 1px solid #f4f4f4;
+    font-size: 13px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.ir_caption {
+    overflow: hidden;
+    width: 1px;
+    line-height: 0;
+    text-indent: -9999px;
+    font-size: 1px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* col css */
+.col1 {
+    width: 40px;
+}
+.col2 {
+    width: auto;
+}
+col {
+    width: 70px;
+}
+
+/* thead css */
+.txt_col {
+    display: block;
+    position: absolute;
+    top: 0;
+    line-height: 43px;
+    width: 40px;
+    color: rgba(0, 0, 0, .5);
+}
+
+.table_name { 
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+.table_name > span {
+    width: auto;
+}
+
+.btn_sort {
+    width: 70px;
+    height: 43px;
+    display: block;
+    position: absolute;
+    top: 0;
+    line-height: 43px;
+}
+.sort_on {
+    color: #1760f0;
+}
+
+/* tbody css */
+.td_rank {
+    position: relative;
+    font-weight: 700;
+}
+.table_list .td_name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+.table_list tr:nth-child(2n) td {
+    background-color: hsla(0, 0%, 85%, .09);
+}
+
+.imgTeam {
+    float: left;
+    margin-right: 4px;
+}
+img {
+    vertical-align: top;
+    border: 0 none;
+    width: 32px;
+    height: 32px;
+    aspect-ratio: auto 32 / 32;
+}
+.txt_name {
+    line-height: 33px;
+}
+.selected_on {
+    position: relative;
+    font-weight: 700;
+}
+.selected_on::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 44px;
+    background-color: rgba(64, 134, 255, .06);
+    content: "";
+}
